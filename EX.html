@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritence</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,phno){
+                this.name = name;
+                this.mobile = phno;
+            }
+            getDetails(){
+                console.log("name:",this.name,"\n mobile",this.mobile)
+            }
+        }
+        class Employee extends Person {
+            constructor(n,m,s,c){
+                 super(n,m)
+                this.salary = s;
+                this.company = c;
+
+            }
+        }
+        p1 = new Person("abc",7896543210)
+
+        e1 = new Employee('Gana',8976895432,40000,'TCS')
+        console.log(e1)
+        
+    </script>
+</body>
+</html>
